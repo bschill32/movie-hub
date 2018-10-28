@@ -37,5 +37,21 @@ module.exports = {
         favorites.push(newFavorite)
         res.status(200).send(favorites)
     },
-    
+    deleteFavorite: (req, res) => {
+        const {id} = req.params
+        let index = favorites.findIndex(fav => fav.id === Number(id))
+        if(index !== -1) {
+            favorites.splice(index, 1)
+        }
+        res.status(200).send(favorites)
+    },
+    updateFavorite: (req, res) => {
+        const {id} = req.params
+        const {title} = req.body
+        let i = favorites.findIndex(fav => fav.id === +id)
+        if(i !== -1) {
+            favorites[i].title = title
+        }
+        res.status(200).send(favorites)
+    }
 }
