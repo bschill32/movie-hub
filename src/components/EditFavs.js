@@ -3,6 +3,7 @@ import React, {Component} from "react"
 class EditFavs extends Component {
     constructor() {
         super()
+        
         this.state = {
             title: '',
             edit: false

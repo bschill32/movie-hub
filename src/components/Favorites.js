@@ -59,6 +59,7 @@ class Favorites extends Component {
         let favoritesList = this.state.favorites.map(fav => {
             return (
                 <EditFavs
+                key={fav.id}
                 fav={fav}
                 deleteFavorite={this.deleteFavorite}
                 updateFavorite={this.updateFavorite} />
