@@ -8,7 +8,9 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-image: url(http://hdqwalls.com/download/it-2017-movie-4k-34-3840x2400.jpg);
+  background-size: cover;
+  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,6 +18,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-shadow: 1px 1px 2px black, 0 0 1em red, 0 0 0.2em Red;
 }
 
 .App-link {
@@ -29,4 +32,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.top {
+  display: flex;
+  justify-content: space-around
+
+}
+
+.space {
+  width: 25%;
+}
+
+.fav {
+  font-size: 100px;
+  font-family: 'Permanent Marker'
+
 }

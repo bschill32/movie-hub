@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-class Top10 extends Component {
+class Vote extends Component {
     constructor() {
         super()
 
@@ -12,7 +12,7 @@ class Top10 extends Component {
     }
 
     componentDidMount = () => {
-        axios.get('https://api.themoviedb.org/3/discover/movie?api_key=76d7b27b5dfcc547a04ba766e18e963d&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1').then(response => {
+        axios.get('https://api.themoviedb.org/3/discover/movie?api_key=76d7b27b5dfcc547a04ba766e18e963d&language=en-US&sort_by=vote_count.desc&include_adult=false&include_video=false&page=1').then(response => {
             // console.log('TMDB', response);
             var ten = response.data.results
             var items = ten.splice(0,10);
@@ -26,7 +26,7 @@ class Top10 extends Component {
         // console.log(this.state.movies)
         return (
             <div className='space'>
-                <h1>New Releases</h1>
+                <h1>Top Ranked</h1>
                 {
                     this.state.movies.map(update => {
                         return (
@@ -42,4 +42,4 @@ class Top10 extends Component {
     }
 }
 
-export default Top10
+export default Vote

@@ -4,7 +4,7 @@ import React from 'react';
  
 function Header() {
     return (
-        <h1>Favorite Movies</h1>
+        <h1 className="fav">Favorite Movies</h1>
     )
 }
 
